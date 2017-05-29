@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar color="patten-blue">
+    <ion-title>Admin Student Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list *ngFor="let student of Students"> 
+    <ion-item-sliding>
+      <ion-item (click)="goToStudentDetails(student)">
+      <div class="studentName">{{student.studentname}}</div>
+      </ion-item>
+      <ion-item-options side="right">
+         <button ion-button color="danger">
+        <ion-icon name="trash"></ion-icon>
+        Delete
+      </button>
+      <button ion-button color="yellow">
+        <ion-icon name="settings"></ion-icon>
+        Update
+      </button> 
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
+<ion-fab right bottom>
+    <button ion-fab (click)="addNewStudent()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>

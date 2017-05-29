@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar color="patten-blue" hideBackButton="true">
+    <ion-buttons end>
+    <button ion-button clear (click)="goToWelcome()">Sign Out</button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+
+</ion-header> 
+
+<ion-content padding> 
+
+  <div text-center>
+    <h1>Admin<br>Dashboard</h1>
+  </div>
+  <ion-card (click)="goToBooks()">
+
+    <ion-card-header class="cardHeader">
+      Books
+    </ion-card-header>
+
+    <ion-card-content text-center>
+      You can manage the books from here.
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card (click)="goToStudents()">
+
+  <ion-card-header class="cardHeader">
+   Students
+  </ion-card-header>
+
+  <ion-card-content text-center>
+    You can manage the students from here.
+  </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header class="cardHeader">
+      Issued Books
+    </ion-card-header>
+
+    <ion-card-content text-center>
+      You can see the issued books from here.
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
+

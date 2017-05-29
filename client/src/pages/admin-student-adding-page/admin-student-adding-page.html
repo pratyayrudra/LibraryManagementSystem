@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar color="patten-blue">
+    <ion-title>Register Student</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeSignUpModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bgcolor">
+  <form [formGroup]="signUpForm">
+  <h3>New User Details</h3>
+  <ion-item class="formBgColor">
+    <ion-label>Name :</ion-label>
+    <ion-input formControlName="name" type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item class="formBgColor">
+    <ion-label>Department :</ion-label>
+    <ion-select formControlName="department" [(ngModel)]="department">
+      <ion-option value="CSE" checked="true">CSE</ion-option>
+      <ion-option value="IT">IT</ion-option>
+      <ion-option value="Electronics">Electronics</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="formBgColor">
+    <ion-label>Year :</ion-label>
+    <ion-select formControlName="year" [(ngModel)]="year">
+      <ion-option value="1st Year" checked="true">1st Year</ion-option>
+      <ion-option value="2nd Year">2nd Year</ion-option>
+      <ion-option value="3rd Year">3rd Year</ion-option>
+      <ion-option value="4th Year">4th Year</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="formBgColor">
+    <ion-label>Phone :</ion-label>
+    <ion-input formControlName="phnNo" type="number" [(ngModel)]="phnNo"></ion-input>
+  </ion-item>
+  <ion-item class="formBgColor">
+    <ion-label>Roll :</ion-label>
+    <ion-input formControlName="roll" type="number" [(ngModel)]="roll"></ion-input>
+  </ion-item>
+  <ion-item class="formBgColor">
+    <ion-label>Email :</ion-label>
+    <ion-input formControlName="email" type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item class="formBgColor">
+    <ion-label>Password :</ion-label>
+    <ion-input formControlName="password" type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  </form>
+  <br>
+    <button ion-button round block (click)="signUp()" type="submit" color="secondary">Sign Up</button>
+</ion-content>

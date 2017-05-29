@@ -1,0 +1,28 @@
+<link href="https://fonts.googleapis.com/css?family=Barrio|Dosis" rel="stylesheet">
+
+
+<ion-content padding class="background-img">
+
+    
+
+    <form [formGroup]="studentLoginForm" class="centering">
+      <h2 class="heading">Student Login</h2>
+        <ion-item class="bgformcolor">
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text" name="email" [(ngModel)]="email" formControlName="email" ></ion-input>
+        </ion-item>
+        <ion-item class="bgformcolor">
+          <ion-label>Password</ion-label>
+          <ion-input type="password" name="password" [(ngModel)]="password" formControlName="password"></ion-input>
+        </ion-item>
+        <button ion-button round block color="secondary" (click)="studentLogin()">Login</button>
+        <p class="align">
+          Not registered yet?  <a (click)="signUp()">Sign Up</a>
+        </p>
+    </form>
+    <ion-fab right bottom>
+          <button ion-fab mini (click)="goToWelcome()"><ion-icon name="home"></ion-icon></button>
+    </ion-fab>
+
+</ion-content>
+

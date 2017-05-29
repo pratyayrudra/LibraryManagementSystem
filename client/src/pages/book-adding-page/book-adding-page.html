@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar color="patten-blue">
+    <ion-title>Book Adding Page</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeSignUpModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <form [formGroup]="bookAddingForm">  
+    <ion-list>
+      <ion-item>
+        <ion-label>Name :</ion-label>
+        <ion-input type="text" formControlName="name" [(ngModel)]="name"></ion-input>  
+      </ion-item>
+      <ion-item>
+      <ion-label>Publisher :</ion-label>
+        <ion-input type="text" formControlName="publisher" [(ngModel)]="publisher"></ion-input>  
+      </ion-item>
+      <ion-item>
+      <ion-label>Author :</ion-label>
+        <ion-input type="text" formControlName="author" [(ngModel)]="author"></ion-input>  
+      </ion-item>
+      <ion-item>
+      <ion-label>Total Pages :</ion-label>
+        <ion-input type="Number" formControlName="pages" [(ngModel)]="pages"></ion-input>  
+      </ion-item>
+      <ion-item>
+      <ion-label>Image Url :</ion-label>
+        <ion-input type="text" formControlName="image_url" [(ngModel)]="image_url"></ion-input>  
+      </ion-item>  
+    </ion-list>  
+    <button ion-button round block type="submit" (click)="addBook" color="secondary">Add Book</button>
+  </form> 
+
+</ion-content>
